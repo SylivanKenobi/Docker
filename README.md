@@ -25,3 +25,20 @@ The docker-compose cli can be used to manage a multi-container application. It a
 
 
 https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html
+
+
+## Docker
+
+#### Prerequisities
+
+* [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [docker-compose](https://docs.docker.com/compose/install/)
+
+### Theorie
+
+### Übungen
+
+#### Quellen
+
+* https://codefresh.io/docker-tutorial/java_docker_pipeline/
+* https://codefresh.io/docs/docs/learn-by-example/java/spring-boot-2/
