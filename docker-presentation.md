@@ -1,75 +1,27 @@
-#Sprint 2018-28
+#Docker
 
-![Titel](assets/titel.jpg)
-
+<div style="height:300px">
+![Titel](assets/docker.jpeg)
+</div>
 <!-- .slide: class="master01" -->
-
-<!-- slide -->
-
-<!-- Icons / Emojis   -->
-<!-- Better: &#9989;  -->
-<!-- Worse:  &#10060; -->
-
-<!-- .slide: class="master01" -->
-
 <!-- section -->
 
 ## Inhalt
-
-
-<!-- .slide: class="master03" -->
-
-<!-- section -->
-
-<!-- .slide: class="master04" -->
-
-<!-- slide -->
-
-
-  <!-- .slide: class="master03" -->
-
-<!-- slide -->
-
-<!-- .slide: class="master03" -->
-<!-- slide -->
-
-<!-- .slide: class="master03" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-
-<!-- section -->
-<!-- .slide: class="master04" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- section -->
-<!-- .slide: class="master04" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- slide -->
-<!-- .slide: class="master03" -->
-<!-- slide -->
-
-<!-- .slide: class="master03" -->
-<!-- slide -->
-
+* Was ist Docker
+* Weshalb Docker
 
 <!-- .slide: class="master03" -->
 <!-- section -->
 
+## Was ist Docker
 
-<!-- .slide: class="master04" -->
+* OS level virtualisierung
 
+<!-- .slide: class="master03" -->
 <!-- slide -->
+## Docker aufbau
+![architektur](assets/architecture.png)
 
-  <!-- .slide: class="master03" -->
-
-<!-- slide -->
 
 <!-- .slide: class="master03" -->
 <!-- section -->
