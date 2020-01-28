@@ -31,10 +31,28 @@ Um einen Container zu erstellen benötigt man ein Image. Ein Image besteht meist
 Dependencys und der Applikation. Images können entweder gebuildet werden oder von einer Registry gepulled werden.
 Die grösste Registry ist Docker hub.
 
+## Übung 1
+
+Als erste Übung werden wir einen Container erstellen. Der einfachste Weg um dies zu machen ist mit docker run <image_name>. Könnt alle mal bei euch im Terminal disen Befehl eingeben uns schauen was passiert
+
+docker run -it thunderguts13/docker_meet_up:latest
+
+So jetzt haben wir einen Container mit einem kleinen Ruby Script welches immer am laufen ist. Und ja die Fragen werden nicht besser.
+
+Mit docker ps könnt ihr anschauen welche Container am laufen sind. Falls man genug von einem Container hat kann dieser mit docker kill <container_name> gestoppt werden. Um ihn zu starten kann wieder der Run Befehl verwendet werden.
+
+Es gibt die Möglichkeit in einen Container reinzugehen dies kann man mit docker exec -it <container_name> /bin/sh machen.
+
+
+Ruby Docker
+https://hub.docker.com/_/ruby/
+`$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:2.5 ruby hello.rb`
+
 ## Dockerfile
 
-Ein Dockerfile ist ein Script um Images zu erstellen.
+Ein solches Image wie vorher zu erstellen ist nicht seht schwierig. Die Grundlage dafür ist ein Dockerfile. Ein Dockerfile ist ein Script in dem man dem dockerdaemon mitteilit wie ein Image erstellt werden soll.
 
+Die Befehle sind Dockerfile spezifisch. Die Dokumentation dazu ist auf https://docs.docker.com/engine/reference/builder/ zu finden.
 
 Ablauf Dockerfile
 
@@ -44,10 +62,13 @@ Ablauf Dockerfile
     - nur die notwendigsten Tools verwenden
 2 Code
 3 Dependency's
+4 Starten
 
-Ruby Docker
-https://hub.docker.com/_/ruby/
-`$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:2.5 ruby hello.rb`
+# Übung 2
+
+Als nächste Übung erst ihr ein Dockerfile für ein kleines Ruby script.
+
+Falls man nicht selbst eins schreiben will kann man dieses Git repo klonen dies beinhaltet ein kleines Script welches unendlich läuft.
 
 create dockerfile for basic ruby Project
 https://hub.docker.com/_/ruby/

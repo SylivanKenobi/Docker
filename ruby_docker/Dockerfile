@@ -1,9 +1,9 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.5
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-USER guest 
+USER nobody 
 
 CMD ["ruby", "hello_forever.rb"]
