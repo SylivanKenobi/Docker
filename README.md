@@ -17,6 +17,8 @@ You could say a registry has many repositories and a repository has many differe
 https://docs.docker.com
 
 ## Docker
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another
+Docker ist eine Firma
 Docker bietet Produkte für os-level virtualisierung mit containern.
 Container laufen als subprozess auf dem kernel.
 Sie sind isoliert von anderen containern und Prozessen des os, dies funktioniert mit
