@@ -35,15 +35,7 @@ Die grösste Registry ist Docker hub.
 
 ## Übung 1
 
-Als erste Übung werden wir einen Container erstellen. Der einfachste Weg um dies zu machen ist mit docker run <image_name>. Könnt alle mal bei euch im Terminal disen Befehl eingeben uns schauen was passiert
 
-docker run -it thunderguts13/docker_meet_up:latest
-
-So jetzt haben wir einen Container mit einem kleinen Ruby Script welches immer am laufen ist. Und ja die Fragen werden nicht besser.
-
-Mit docker ps könnt ihr anschauen welche Container am laufen sind. Falls man genug von einem Container hat kann dieser mit docker kill <container_name> gestoppt werden. Um ihn zu starten kann wieder der Run Befehl verwendet werden.
-
-Es gibt die Möglichkeit in einen Container reinzugehen dies kann man mit docker exec -it <container_name> /bin/sh machen.
 
 
 Ruby Docker
