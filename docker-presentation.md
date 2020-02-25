@@ -17,7 +17,12 @@ $ git clone https://github.com/Thunderguts13/docker_meetup
 * Was ist Docker
 * Was sind Container
 * Docker Aufbau
-* Weshalb Docker
+* Übung 1
+* Dockerfile
+* Übung 2
+* Docker-compose
+* Übung 3
+* Security
 
 <!-- .slide: class="master03" -->
 <!-- section -->
@@ -81,7 +86,7 @@ Container gibt es nicht nur von Docker erhältlich Container sind ein standartis
 Diese Grafik zeigt den Aufbau vom Docker Ökosystem auf. Hier haben wir noch zwei drei Begriffe die wir nocht nicht kennen. Der Daemon ist grundsätzlich ein Prozess der im Hintergrund läuft auf dem System. Dies spezifisch ist der Docker daemon. Images sind die Basis für Container. Mit einem Image kann man mehrere Container starten. Die Registry ist ein Lager von Images entweder Docker hub oder ein Internes Speicher Tool zum Images ablegen. Wie ihr seht hat es Linien die uns erklären wie dies Sache läuft. Der Client setzt einen Befehl ab welcher dann vom Daemon umgesetzt wird. Der erste Befehl ist Build Da sagt Der Client das der Daemon ein Image erstellen soll. Dies passiert mit einem Dockerfile als Basis. Das Image ist dan Lokal auf dem Host abgelegt. Der nächste Befehl ist pull, Pull holt ein Image aus der Registry auf den Host. Jedoch der interessanteste Befehl ist run. Mit run kann man ein image angeben und einen Container starten. run kann falls das Image lokal nicht vorhanden ist es von der Registry herunterladen.
 -->
 <!-- .slide: class="master03" -->
-<!-- section -->
+<!-- slide -->
 # Übung 1
 ```
 $ git clone https://github.com/Thunderguts13/docker_meetup
@@ -94,6 +99,53 @@ Mit docker ps könnt ihr anschauen welche Container am laufen sind. [DOCKER PS O
 
 Es gibt die Möglichkeit in einen Container reinzugehen dies kann man mit docker exec -it <container_name> /bin/sh machen.
  -->
+<!-- .slide: class="master03" -->
+<!-- section -->
+## Dockerfile
+#### Anleitung für ein Image
+
+
+<!-- .slide: class="master03" -->
+<!-- slide -->
+<div style="height:680px">
+![Dockerfile](assets/dockerfile.png)
+</div>
+
+<!--
+Dies ist das Dockerfile von Cryptopus.
+ -->
+
+<!-- .slide: class="master03" -->
+<!-- slide -->
+
+# Übung 2
+
+<!--
+Als zweite Übung werden wir ein Dockerfile erstellen. Im Script Ordner habt ihr ein Ruby script. Die Aufgabe ist es ein Dockerfile zu schreiben für dieses Script.
+ -->
+
+<!-- .slide: class="master03" -->
+<!-- section -->
+
+## Docker-compose
+<!-- .slide: class="master03" -->
+<!-- slide -->
+
+# Übung 3
+
+<!-- .slide: class="master03" -->
+<!-- section -->
+
+## Security
+* root
+* Secrets
+* Source Image
+
+<!--
+Ein Container sollte niemals als root gestartet werden. Sonst hat der Container root zugriff auf den Dockerhost. Um dies zu verhindern muss man am ende des Dockerfiles noch user wechseln. Am besten wählt man einen User mit möglichst wenigen Rechten. Falls das Baseimage dies nicht bietet kann man einen User erstellen.
+
+
+-->
 
 <!-- .slide: class="master03" -->
 <!-- section -->
