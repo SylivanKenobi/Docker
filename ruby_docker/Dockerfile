@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-USER nobody 
+#USER nobody 
 
 CMD ["ruby", "hello_forever.rb"]

@@ -16,7 +16,7 @@ $ git clone https://github.com/Thunderguts13/docker_meetup
 ## Inhalt
 * Was ist Docker
 * Was sind Container
-* Docker Aufbau
+* Docker Enginge Aufbau
 * Übung 1
 * Dockerfile
 * Übung 2
@@ -43,7 +43,7 @@ Dies sind die wichtigsten Meilensteine von Docker.
 -->
 <!-- .slide: class="master03" -->
 <!-- slide -->
-#### Docker eco-system
+#### Was bietet Docker
 <div style="height:480px">
 ![docker-eco](assets/docker-eco.jpeg)
 </div>
@@ -65,21 +65,26 @@ Da dies die gängigsten Tools sind welche in der Entwicklung eingesetzt werden.
  * Packet aus Applikation und Dependencies
  * Os-level virtualisierung
  * Isoliert vom System
+
 <!--
-Container gibt es nicht nur von Docker erhältlich Container sind ein standartisiertes Softwarepacket welche den Applikationscode und alle dependencies beinhaltet. So, dass der Code unabhängig vom System zuverlässig laufen kann. Ein Container läuft im Kernel des host-os dies ist eine Art von os-level-virtualisierung. Genauer gesagt läuft der Container in einem isolierten user space auf dem Kernel. Der Container sieht vom Gerät nur die Ressourcen welche ihm zu Verfügung gestellt werden. Da der Container keinen eigenen Kernel benötigt ist er einiges schmaller als traditionelle Virtualisierung mit Virtualbox oder Hypervisor.
+Container sind nicht nur von Docker erhältlich, Container sind ein standartisiertes Softwarepacket welche den Applikationscode und alle dependencies beinhaltet. 
+Ein Container ist eine Art von Virtualisierung genauer gesagt os-level-virtualisierung. Dies beduetet, dass der Container nicht auf dem OS läuft sondern als Subprozess auf dem kernel. Damit der Container isoliert ist vom Rest vom System ist er in einem eigenen user space. Der Container sieht vom Gerät nur die Ressourcen welche ihm zu Verfügung gestellt werden. Da der Container keinen eigenen Kernel benötigt ist er einiges schmaller als traditionelle Virtualisierung mit Virtualbox oder Hypervisor.
+
+
  -->
 
 <!-- .slide: class="master03" -->
 <!-- slide -->
 
 <div style="height:480px">
-![docker vs Vm](assets/dockerVSvm.jpeg)
+![docker vs Vm](assets/docker-vs-vm.png)
 </div>
 
-<!-- Auf dieser Grafik erkennt man gut was dies Stacktechnisch ausmacht. Ein Container hat einiges weniger an OVerhead im Vergleich zu einer Virtual Machine. Aus diesem Grund sind Container einiges Rssourcen schonender als eine Virtualmachine, dies ermöglicht es auf weniger Maschinen mehr Applikationen zu Deployen.-->
+<!-- Auf dieser Grafik erkennt man gut was dies Stacktechnisch ausmacht. Ein Container hat einiges weniger an Overhead im Vergleich zu einer Virtual Machine. Aus diesem Grund sind Container einiges Rssourcen schonender als eine Virtualmachine, dies ermöglicht es auf weniger Maschinen mehr Applikationen zu Deployen. Ein Nachteil gegenüber Virtualmachines ist man kann nur Linux containerisieren. Man kann keine alte Spielkonsole emulieren, kein Windows 95 starten, weil der Kernel vom HostOs verwendet wird.
+-->
 <!-- .slide: class="master03" -->
 <!-- section -->
-## Docker aufbau
+## Docker Enginge Aufbau
 
 ![architektur](assets/architecture.png)
 <!--
@@ -128,11 +133,29 @@ Als zweite Übung werden wir ein Dockerfile erstellen. Im Script Ordner habt ihr
 <!-- section -->
 
 ## Docker-compose
+
+* Mehrere Container
+* Volumes
+* Netzwerk
+
+<!-- 
+Compose ermöglich das verwalten von mehreren Containern gleichzeitig. Das bedeutet zum Beispiel, dass die Applikation in einem Container und die Datenbank in einem anderen Container gestartet werden können. Dies funktioniert auch ohne compose jedoch wird es mit compose einiges vereinfacht. Compose ermöglich es mit einem einzigen Befehl. Compose macht noch einige zusätzliche Sachen um die ganze sache zu vereinfachen. Es ermöglicht es Vloumes ganz einfach zu erstellen so dass die Daten persisstent sind auch wenn der Container gelöscht wird. Die Kommunikation zwischen Container wird auch einiges vereinfacht. Die Container müssen nicht mehr via IP kommunizieren sondern via Container Name.
+ -->
+<!-- .slide: class="master03" -->
+<!-- slide -->
+
+
+<div style="height:680px">
+![docker compose](assets/docker-compose.png)
+</div>
+
 <!-- .slide: class="master03" -->
 <!-- slide -->
 
 # Übung 3
-
+<!-- 
+Docker compose für entweder Cryptopus oder pfeedback
+ -->
 <!-- .slide: class="master03" -->
 <!-- section -->
 
@@ -143,8 +166,6 @@ Als zweite Übung werden wir ein Dockerfile erstellen. Im Script Ordner habt ihr
 
 <!--
 Ein Container sollte niemals als root gestartet werden. Sonst hat der Container root zugriff auf den Dockerhost. Um dies zu verhindern muss man am ende des Dockerfiles noch user wechseln. Am besten wählt man einen User mit möglichst wenigen Rechten. Falls das Baseimage dies nicht bietet kann man einen User erstellen.
-
-
 -->
 
 <!-- .slide: class="master03" -->
