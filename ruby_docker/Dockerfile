@@ -2,8 +2,8 @@ FROM ruby:2.5
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY hello_forever.rb .
 
-#USER nobody 
+USER root
 
 CMD ["ruby", "hello_forever.rb"]
